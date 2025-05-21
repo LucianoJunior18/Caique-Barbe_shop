@@ -11,12 +11,12 @@
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e),
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.452), #000000),
     url("../img/hero.jpg");
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,8 +34,8 @@
   justify-content: center;
   padding: 14px;
 
-  img {
-    width: 650px;
+  .img-caique {
+    width: 700px;
   }
 
   h1 {
@@ -51,10 +51,21 @@
   }
 }
 
+@keyframes rotateSideToSide {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
 .button-contact {
   padding: 14px 28px;
-  color: $white-normal;
-  background-color: $black-normal;
+  color: $black-normal;
+  background-color: white;
   border-radius: 10px;
   border: 0;
   font-size: 18px;
@@ -72,5 +83,79 @@
   }
   to {
     transform: scale(1.07);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+
+    .img-caique {
+      display: none;
+    }
+
+    p {
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero p {
+    font-size: 30px;
+  }
+}
+
+// about
+
+.about {
+  content: "";
+  display: block;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.39), #000000),
+    url("../img/128847082_1340514782951961_1656992210279496809_n.jpg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 0;
+  opacity: 0.9;
+  overflow: hidden;
+  color: $white-normal;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+
+  img {
+    max-width: 800px;
+  }
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.about-description {
+  h2 {
+    font-size: 38px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin-bottom: 14px;
+    line-height: 150%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
   }
 }

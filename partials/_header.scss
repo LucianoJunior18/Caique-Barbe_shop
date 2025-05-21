@@ -1,6 +1,7 @@
 header {
   background-color: $incolor;
   width: 100%;
+
   padding: 20px 20px;
   position: fixed;
   top: 0;
@@ -85,6 +86,7 @@ header {
   }
 
   .header-button {
+    display: none;
     padding: 8px 80px;
   }
 }
