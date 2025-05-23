@@ -39,7 +39,7 @@ header {
   display: inline-block;
   margin-left: 20px;
   color: $white-normal;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: 0.4s;
 }
 
@@ -50,6 +50,7 @@ header {
 
 .header-button {
   border: 1px solid $white-normal;
+  font-size: 1.3rem;
   padding: 8px 24px;
   border-radius: 4px;
   color: $white-normal;
@@ -81,8 +82,8 @@ header {
   .header-logo img {
     display: flex;
     text-align: center;
-    width: 170px;
-    margin: 26px auto;
+    width: 90px;
+    margin: 0;
   }
 
   .header-button {

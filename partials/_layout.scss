@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -13,13 +15,13 @@
   position: absolute;
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.452),
       /* Aumente a opacidade aqui para uma sombra mais forte no topo */
-        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.425),
       /* Transição para uma sombra mais forte antes do preto */ #000000
         /* Preto puro na parte inferior */
     ),
-    url("../img/hero.jpg");
+    url("../img/Design\ sem\ nome\ \(33\).png");
 
   left: 0;
   top: 0;
@@ -38,38 +40,62 @@
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   padding: 14px;
 
-  .img-caique {
-    width: 700px;
+  .hero-txt {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 110px;
+      font-family: "Yellowtail", cursive;
+      font-weight: bolder;
+      line-height: 80px;
+      margin: 20px;
+      max-width: 940px;
+    }
+
+    .titulo {
+      text-align: center;
+    }
+
+    p {
+      font-size: 22px;
+      text-align: center;
+      margin: 14px 0;
+    }
   }
 
-  h1 {
-    text-align: center;
-    line-height: 150%;
-    max-width: 940px;
-    font-size: 46px;
+  .hero-cont {
+    display: flex;
+    margin: 0 120px;
+    align-items: center;
+    gap: 30px;
   }
 
-  p {
-    text-align: center;
-    margin: 14px 0;
+  a i {
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    color: $white-normal;
+  }
+
+  a i:hover {
+    color: $white-dark;
+    animation: scaleButton 0.5s alternate infinite;
+  }
+
+  .hero-img {
+    position: absolute;
+    top: 50%;
+    right: 200px; /* distância da borda direita */
+    transform: translateY(-50%);
+    width: 500px;
   }
 }
 
-@keyframes rotateSideToSide {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(-20deg);
-  }
-}
 .button-contact {
   padding: 14px 28px;
   color: $black-normal;
@@ -95,15 +121,48 @@
 }
 
 @media screen and (max-width: 768px) {
+  .bg-home:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.452),
+        /* Aumente a opacidade aqui para uma sombra mais forte no topo */
+          rgba(0, 0, 0, 0.425),
+        /* Transição para uma sombra mais forte antes do preto */ #000000
+          /* Preto puro na parte inferior */
+      ),
+      url("../img/Design\ sem\ nome\ \(33\).png");
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60% 0;
+    opacity: 0.9;
+  }
+
   .hero {
-    min-height: 60vh;
+    min-height: 100vh;
+    align-items: center;
 
     .img-caique {
       display: none;
     }
 
-    p {
-      font-size: 40px;
+    h1.titulo,
+    h1.subtitulo {
+      font-size: 70px;
+      line-height: 60px;
+      margin: 10px auto;
+    }
+
+    .button-contact {
+      width: 190px;
     }
   }
 }
@@ -119,12 +178,12 @@
 .about {
   content: "";
   display: block;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.349), #000000),
-    url("/img/128847082_1340514782951961_1656992210279496809_n.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.514), #000000),
+    url("/img/freepik__preciso-quue-melhore-essa-imagem-para-4k-que-fique__14441.png");
   left: 0;
   top: 0;
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
@@ -142,7 +201,7 @@
   padding: 34px 14px 64px 14px;
 
   img {
-    max-width: 800px;
+    max-width: 1000px;
   }
 }
 
@@ -152,11 +211,14 @@
 
 .about-description {
   h2 {
-    font-size: 38px;
-    margin-bottom: 24px;
+    font-family: "Yellowtail", cursive;
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 20px;
   }
 
   p {
+    font-size: 23px;
     margin-bottom: 14px;
     line-height: 150%;
   }
