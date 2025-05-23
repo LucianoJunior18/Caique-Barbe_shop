@@ -11,6 +11,38 @@ header {
   z-index: 9999999;
 }
 
+header.rolar {
+  background-color: $white-normal;
+  color: $black-normal;
+  box-shadow: 0 0 8px #000;
+  height: 125px;
+  padding: 5px 0;
+}
+
+header.rolar .header-link a {
+  border: $black-normal;
+  color: $black-normal;
+}
+
+header.rolar .header-button {
+  border: 1px solid $black-normal;
+  background-color: $black-normal;
+  color: $white-normal;
+}
+
+header.rolar .header-button:hover {
+  background-color: $white-dark;
+  color: $black-normal;
+  transform: scale(1.1);
+}
+
+#menu-icon {
+  color: $white-normal;
+  font-size: 3rem;
+  z-index: 999;
+  cursor: pointer;
+}
+
 @keyframes translateY {
   from {
     transform: translateY(0) scale(1);
@@ -49,18 +81,21 @@ header {
 }
 
 .header-button {
+  display: inline-block;
   border: 1px solid $white-normal;
   font-size: 1.3rem;
   padding: 8px 24px;
   border-radius: 4px;
-  color: $white-normal;
-  background-color: transparent;
-  transition: 0.5s;
+  background-color: $white-normal;
+  color: $black-normal;
+  position: relative;
+  transition: transform 0.4s, background-color 0.4s;
 }
 
 .header-button:hover {
-  background-color: $white-normal;
+  background-color: $white-dark;
   color: $black-normal;
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 768px) {
