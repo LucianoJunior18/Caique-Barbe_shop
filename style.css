@@ -39,7 +39,7 @@ header.rolar .header-button {
 }
 
 header.rolar .header-button:hover {
-  background-color: #b6b5b5;
+  background-color: #00a3ad;
   color: #000000;
   transform: scale(1.1);
 }
@@ -83,7 +83,7 @@ header.rolar .header-button:hover {
 }
 
 .header-link a:hover {
-  color: #b6b5b5;
+  color: #00a3ad;
   transform: scale(1.2);
 }
 
@@ -100,7 +100,7 @@ header.rolar .header-button:hover {
 }
 
 .header-button:hover {
-  background-color: #b6b5b5;
+  background-color: #00a3ad;
   color: #000000;
   transform: scale(1.1);
 }
@@ -196,7 +196,7 @@ header.rolar .header-button:hover {
   color: #fff;
 }
 .hero a i:hover {
-  color: #b6b5b5;
+  color: #00a3ad;
   animation: scaleButton 0.5s alternate infinite;
 }
 .hero .hero-img {
@@ -219,6 +219,7 @@ header.rolar .header-button:hover {
 }
 
 .button-contact:hover {
+  background-color: #00a3ad;
   animation: scaleButton 0.8s alternate infinite;
 }
 
@@ -271,7 +272,7 @@ header.rolar .header-button:hover {
 .about {
   content: "";
   display: block;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.514), #000000), url("img/secundaria.png");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.514), #000000), url("/img/secundaria.png");
   left: 0;
   top: 0;
   width: 100%;
@@ -328,6 +329,7 @@ header.rolar .header-button:hover {
 }
 
 .services-content h2 {
+  font-family: "Yellowtail", cursive;
   text-transform: uppercase;
   text-align: center;
   font-size: 38px;
@@ -388,7 +390,7 @@ header.rolar .header-button:hover {
 }
 
 .haircut-info button:hover {
-  background-color: rgb(2, 119, 2);
+  background-color: #00a3ad;
   transform: scale(1.2);
 }
 
@@ -397,6 +399,125 @@ header.rolar .header-button:hover {
     flex-direction: column;
   }
 }
+.app-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 10rem;
+  background-color: #00a3ad; /* Cor de fundo amarelo */
+  color: #000000;
+}
+
+.app-section .content {
+  max-width: 40%;
+}
+
+.app-section h1 {
+  font-size: 90px;
+  font-family: "Yellowtail", cursive;
+  font-weight: bolder;
+  line-height: 80px;
+  margin-bottom: 1rem;
+}
+
+.app-section h1 span {
+  color: white; /* Destaque da cor */
+}
+
+.app-section p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.app-section .download-buttons img {
+  width: 180px; /* Tamanho dos botões */
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.app-section .download-buttons img:hover {
+  transform: scale(1.1);
+}
+
+.app-section .images {
+  display: flex;
+  gap: 1rem;
+}
+
+.app-section .app-img-cell {
+  width: 280px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.app-section .app-img-cell:hover {
+  transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .app-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .app-section .content,
+  .images {
+    max-width: 100%;
+  }
+  .images {
+    margin-top: 20px;
+  }
+  .phone {
+    max-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .app-section h1 {
+    font-size: 1.8rem;
+  }
+  .app-section p {
+    font-size: 1rem;
+  }
+  .phone {
+    max-width: 100px;
+  }
+}
+.localizacao {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.localizacao h2 {
+  font-family: "Yellowtail", cursive;
+  font-weight: bolder;
+  line-height: 80px;
+  font-size: 50px;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ajusta a largura do mapa no centro */
+  max-width: 100%; /* Limita a largura máxima do mapa */
+  height: auto; /* Ajusta a altura proporcional */
+  padding: 10px; /* Espaçamento opcional */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+  background-color: #fff; /* Fundo opcional */
+}
+
+.iframe {
+  width: 80%; /* O mapa ocupa toda a largura do container */
+  height: 450px; /* Altura fixa */
+  border: 0; /* Remove borda */
+}
+
 body {
   font-family: "Ancizar Serif", serif;
   width: 100%;

@@ -31,7 +31,7 @@ header.rolar .header-button {
 }
 
 header.rolar .header-button:hover {
-  background-color: $white-dark;
+  background-color: $verde-principal;
   color: $black-normal;
   transform: scale(1.1);
 }
@@ -76,7 +76,7 @@ header.rolar .header-button:hover {
 }
 
 .header-link a:hover {
-  color: $white-dark;
+  color: $verde-principal;
   transform: scale(1.2);
 }
 
@@ -93,7 +93,7 @@ header.rolar .header-button:hover {
 }
 
 .header-button:hover {
-  background-color: $white-dark;
+  background-color: #00a3ad;
   color: $black-normal;
   transform: scale(1.1);
 }

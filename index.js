@@ -9,3 +9,5 @@ document.addEventListener("scroll", () => {
         navBar.classList.remove("rolar")
     }
 })
+
+
