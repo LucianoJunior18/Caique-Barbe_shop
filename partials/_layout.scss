@@ -134,7 +134,7 @@
         /* Transição para uma sombra mais forte antes do preto */ #000000
           /* Preto puro na parte inferior */
       ),
-      url("/img/home-principal.png");
+      url("./img/home-principal.png");
 
     left: 0;
     top: 0;
@@ -180,7 +180,7 @@
   content: "";
   display: block;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.514), #000000),
-    url("../img/secundaria.png");
+    url("./img/secundaria.png");
   left: 0;
   top: 0;
   width: 100%;
