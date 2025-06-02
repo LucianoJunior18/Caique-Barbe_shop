@@ -1,12 +1,10 @@
 header {
   background-color: $incolor;
   width: 100%;
-
   padding: 20px 20px;
   position: fixed;
   top: 0;
   left: 0;
-
   transition: 0.5s;
   z-index: 9999999;
 }
@@ -24,16 +22,25 @@ header.rolar .header-link a {
   color: $black-normal;
 }
 
+header.rolar .header-link a:hover {
+  color: $verde-principal;
+}
+
 header.rolar .header-button {
   border: 1px solid $black-normal;
   background-color: $black-normal;
   color: $white-normal;
+  border: none;
 }
 
 header.rolar .header-button:hover {
   background-color: $verde-principal;
-  color: $black-normal;
+  color: $white-normal;
   transform: scale(1.1);
+}
+
+header.rolar .star {
+  color: $black-normal;
 }
 
 #menu-icon {
@@ -59,12 +66,33 @@ header.rolar .header-button:hover {
 }
 
 .header-logo {
+  display: flex;
+  gap: 20px;
   width: 120px;
   cursor: pointer;
 }
 
-.header-logo:hover {
+.header-logo img:hover {
   animation: translateY 0.8s infinite alternate;
+}
+
+.star {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  color: $white-normal;
+
+  .star-icon {
+    transition: 0.4s;
+  }
+  .star-icon:hover {
+    color: #00a3ad;
+    cursor: pointer;
+    transform: scale(1.5);
+  }
 }
 
 .header-link a {
@@ -98,7 +126,23 @@ header.rolar .header-button:hover {
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
+  .header-link a {
+    font-size: 1.1rem;
+    margin-left: 10px;
+  }
+
+  .header-button {
+    font-size: 1rem;
+    padding: 5px 5px;
+  }
+
+  .header-logo img {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .header-content {
     width: 100%;
     flex-direction: column;

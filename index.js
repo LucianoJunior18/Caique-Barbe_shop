@@ -11,3 +11,11 @@ document.addEventListener("scroll", () => {
 })
 
 
+const verMaisButton = document.getElementById('verMais');
+const hiddenHaircuts = document.querySelectorAll('.hidden');
+
+verMaisButton.addEventListener('click', () => {
+    hiddenHaircuts.forEach(haircut => haircut.classList.toggle('hidden'));
+    verMaisButton.textContent =
+        verMaisButton.textContent === 'Ver Mais' ? 'Ver Menos' : 'Ver Mais';
+});
