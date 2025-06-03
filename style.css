@@ -19,6 +19,10 @@ header {
   z-index: 9999999;
 }
 
+.menu-mobile {
+  display: none;
+}
+
 header.rolar {
   background-color: #fff;
   color: #000000;
@@ -178,6 +182,9 @@ header.rolar .star {
   }
 }
 @media screen and (max-width: 800px) {
+  .menu-mobile {
+    display: block;
+  }
   .header-content {
     width: 100%;
     align-items: center;
@@ -302,7 +309,7 @@ header.rolar .star {
     transform: scale(1.07);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 868px) {
   .bg-home:before {
     content: "";
     display: block;

@@ -9,6 +9,10 @@ header {
   z-index: 9999999;
 }
 
+.menu-mobile {
+  display: none;
+}
+
 header.rolar {
   background-color: $white-normal;
   color: $black-normal;
@@ -175,6 +179,10 @@ header.rolar .star {
 }
 
 @media screen and (max-width: 800px) {
+  .menu-mobile {
+    display: block;
+  }
+
   .header-content {
     width: 100%;
     align-items: center;
