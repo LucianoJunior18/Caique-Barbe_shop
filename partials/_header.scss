@@ -47,6 +47,14 @@ header.rolar .star {
   color: $black-normal;
 }
 
+header.rolar .menu-mobile i {
+  color: $black-normal;
+}
+
+header.rolar .menu-mobile i:hover {
+  color: $verde-principal;
+}
+
 .menu-mobile i {
   font-size: 40px;
   color: $white-normal;
