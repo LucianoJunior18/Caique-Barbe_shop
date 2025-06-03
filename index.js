@@ -1,5 +1,6 @@
 let navBar = document.querySelector("#header")
 
+
 document.addEventListener("scroll", () => {
     let scrollTop = window.scrollY;
 
@@ -8,6 +9,23 @@ document.addEventListener("scroll", () => {
     } else {
         navBar.classList.remove("rolar")
     }
+})
+
+// Menu Mobile
+let btnMenu = document.getElementById("btn-menu")
+let menuMbl = document.getElementById("menu-mobile-div")
+let overlay = document.getElementById("overlay-menu")
+
+btnMenu.addEventListener('click', () => {
+    menuMbl.classList.add("abrir-menu")
+})
+
+menuMbl.addEventListener('click', () => {
+    menuMbl.classList.remove("abrir-menu")
+})
+
+overlay.addEventListener('click', () => {
+    menuMbl.classList.remove("abrir-menu")
 })
 
 
