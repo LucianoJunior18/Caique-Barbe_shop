@@ -806,6 +806,16 @@ footer .line-footer-borda p a {
   background-color: #00a3ad;
 }
 
+.menu-mobile-div .img-nav-mobile {
+  display: flex;
+  justify-content: end;
+}
+
+.img-nav-mobile img {
+  width: 150px;
+  animation: scaleButton 0.5s alternate infinite;
+}
+
 .overlay-menu {
   background-color: rgba(0, 0, 0, 0.768627451);
   width: 100%;

@@ -58,6 +58,16 @@
   background-color: $verde-principal;
 }
 
+.menu-mobile-div .img-nav-mobile {
+  display: flex;
+  justify-content: end;
+}
+
+.img-nav-mobile img {
+  width: 150px;
+  animation: scaleButton 0.5s alternate infinite;
+}
+
 .overlay-menu {
   background-color: #000000c4;
   width: 100%;
