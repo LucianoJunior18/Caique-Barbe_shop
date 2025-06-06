@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+#about,
+#services,
+#app-section,
+#localizacao {
+  scroll-margin-top: 250px; /* ou a altura real do seu menu fixo */
+}
 
 .container {
   max-width: 1440px;
@@ -297,6 +303,7 @@
   img {
     width: 100%;
     max-width: 354px;
+
     transition: transform 0.25s;
   }
 }

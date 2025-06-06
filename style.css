@@ -215,6 +215,13 @@ header.rolar .menu-mobile i:hover {
     display: flex;
   }
 }
+#about,
+#services,
+#app-section,
+#localizacao {
+  scroll-margin-top: 250px; /* ou a altura real do seu menu fixo */
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
