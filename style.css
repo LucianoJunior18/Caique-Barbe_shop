@@ -488,13 +488,20 @@ header.rolar .menu-mobile i:hover {
   z-index: 99;
 }
 
+.haircut-info strong {
+  font-size: 16px;
+  width: 110px;
+}
+
 .haircut-info button {
   border: none;
 }
 
 .haircut-info button a {
   display: block;
+  width: 100px;
   color: #fff;
+  font-size: 16px;
   background-color: #000000;
   padding: 7px 10px;
   border-radius: 10px;
@@ -566,6 +573,9 @@ header.rolar .menu-mobile i:hover {
   font-size: 1.2rem;
   line-height: 1.3;
   margin-bottom: 1.5rem;
+}
+.app-section p span {
+  color: #fff;
 }
 
 .app-section .download-buttons img {
@@ -806,16 +816,40 @@ footer .line-footer-borda p a {
   background-color: #00a3ad;
 }
 
-.menu-mobile-div .img-nav-mobile {
+.img-nav-mobile {
   display: flex;
   justify-content: end;
+  align-items: center;
 }
 
+/* Estilo do logo */
 .img-nav-mobile img {
   width: 150px;
-  animation: scaleButton 0.5s alternate infinite;
+  border-radius: 100%;
+  z-index: 1; /* Garante que a imagem fique acima da borda */
 }
 
+/* Borda animada */
+.border-animation {
+  position: absolute;
+  width: 160px; /* Levemente maior que o logo */
+  height: 160px;
+  border: 3px solid transparent; /* Evita mostrar borda fixa */
+  border-top: 3px solid #ffffff; /* Apenas uma parte da borda visível */
+  border-bottom: 3px solid #ffffff; /* Apenas uma parte da borda visível */
+  border-radius: 100%;
+  animation: rotate 1s linear infinite;
+}
+
+/* Animação de rotação */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .overlay-menu {
   background-color: rgba(0, 0, 0, 0.768627451);
   width: 100%;
