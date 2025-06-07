@@ -53,6 +53,11 @@ header.rolar .header-button:hover {
   transform: scale(1.1);
 }
 
+header.rolar .border-animation-2 {
+  border-top: 3px solid #000000; /* Apenas uma parte da borda visível */
+  border-bottom: 3px solid #000000;
+}
+
 header.rolar .star {
   color: #000000;
 }
@@ -117,10 +122,33 @@ header.rolar .menu-mobile i:hover {
   cursor: pointer;
 }
 
-.header-logo img:hover {
-  animation: translateY 0.8s infinite alternate;
+.border-animation,
+.border-animation-2 {
+  position: absolute;
+  width: 160px; /* Levemente maior que o logo */
+  height: 160px;
+  border: 3px solid transparent; /* Evita mostrar borda fixa */
+  border-top: 3px solid #ffffff; /* Apenas uma parte da borda visível */
+  border-bottom: 3px solid #ffffff; /* Apenas uma parte da borda visível */
+  border-radius: 100%;
+  animation: rotate 1s linear infinite;
+  margin-top: 10px;
 }
 
+.border-animation-2 {
+  width: 120px;
+  height: 120px;
+  margin-top: 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .star {
   display: flex;
   text-align: center;
@@ -172,7 +200,7 @@ header.rolar .menu-mobile i:hover {
 
 @media screen and (max-width: 990px) {
   header.rolar {
-    height: 110px;
+    height: 130px;
   }
   .header-link a {
     font-size: 1.1rem;
@@ -186,7 +214,12 @@ header.rolar .menu-mobile i:hover {
     width: 200px;
   }
   .header-logo img {
-    width: 80px;
+    width: 115px;
+  }
+  .border-animation-2 {
+    width: 115px;
+    height: 115px;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 800px) {
@@ -204,8 +237,13 @@ header.rolar .menu-mobile i:hover {
   .header-logo img {
     display: flex;
     text-align: center;
-    width: 90px;
+    width: 110px;
     margin: 0;
+  }
+  .border-animation-2 {
+    width: 110px;
+    height: 110px;
+    margin-top: 0;
   }
   .header-button {
     display: none;
@@ -213,6 +251,22 @@ header.rolar .menu-mobile i:hover {
   }
   #menu-icon {
     display: flex;
+  }
+}
+@media screen and (max-width: 340px) {
+  .header-logo img {
+    display: flex;
+    text-align: center;
+    width: 100px;
+    margin: 0;
+  }
+  .border-animation-2 {
+    width: 100px;
+    height: 100px;
+    margin-top: 0;
+  }
+  .star {
+    font-size: 15px;
   }
 }
 #about,
@@ -400,7 +454,7 @@ header.rolar .menu-mobile i:hover {
 
 .about-description {
   text-align: center;
-  width: 100%; /* Ajusta a largura do texto */
+  width: 80%; /* Ajusta a largura do texto */
   height: auto;
 }
 .about-description h2 {
@@ -409,7 +463,8 @@ header.rolar .menu-mobile i:hover {
   margin-bottom: 20px;
 }
 .about-description p {
-  font-size: 18px; /* Tamanho inicial do texto */
+  font-size: 20px; /* Tamanho inicial do texto */
+  text-align: justify;
   margin-bottom: 14px;
   line-height: 1.6; /* Melhor legibilidade */
 }
@@ -433,7 +488,8 @@ header.rolar .menu-mobile i:hover {
     font-size: 40px; /* Reduz título ainda mais */
   }
   .about-description p {
-    font-size: 14px; /* Texto menor para smartphones */
+    font-size: 15px; /* Texto menor para smartphones */
+    line-height: 1.3;
   }
 }
 .services {
@@ -515,7 +571,7 @@ header.rolar .menu-mobile i:hover {
   color: #fff;
   font-size: 16px;
   background-color: #000000;
-  padding: 7px 10px;
+  padding: 0 10px;
   border-radius: 10px;
   border: none;
   transition: transform 0.25s;
@@ -570,10 +626,10 @@ header.rolar .menu-mobile i:hover {
 }
 
 .app-section h1 {
-  font-size: 80px;
+  font-size: 90px;
   font-family: "Yellowtail", cursive;
   font-weight: bolder;
-  line-height: 80px;
+  line-height: 85px;
   margin-bottom: 1rem;
 }
 
@@ -662,6 +718,7 @@ header.rolar .menu-mobile i:hover {
 @media (max-width: 480px) {
   .app-section h1 {
     font-size: 3.5rem; /* Menor tamanho de fonte para h1 */
+    line-height: 1;
   }
   .app-section p {
     text-align: justify;
@@ -846,8 +903,8 @@ footer .line-footer-borda p a {
 /* Borda animada */
 .border-animation {
   position: absolute;
-  width: 160px; /* Levemente maior que o logo */
-  height: 160px;
+  width: 150px; /* Levemente maior que o logo */
+  height: 150px;
   border: 3px solid transparent; /* Evita mostrar borda fixa */
   border-top: 3px solid #ffffff; /* Apenas uma parte da borda visível */
   border-bottom: 3px solid #ffffff; /* Apenas uma parte da borda visível */
