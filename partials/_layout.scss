@@ -406,7 +406,7 @@
 }
 
 .app-section h1 {
-  font-size: 90px;
+  font-size: 6rem;
   font-family: "Yellowtail", cursive;
   font-weight: bolder;
   line-height: 85px;
@@ -456,6 +456,13 @@
 
 /* Responsividade para larguras acima de 990px */
 
+@media (max-width: 1300px) {
+  .app-section h1 {
+    font-size: 4.4rem;
+    line-height: 1.1;
+  }
+}
+
 /* Responsividade para larguras entre 768px e 990px */
 @media (max-width: 990px) {
   .app-section {
@@ -470,8 +477,8 @@
   }
 
   .app-section h1 {
-    font-size: 3rem; /* Ajusta o tamanho da fonte */
-    line-height: 1.2;
+    font-size: 5rem; /* Ajusta o tamanho da fonte */
+    line-height: 1;
   }
 
   .app-section p {
